@@ -1,0 +1,23 @@
+meta {
+  name: 2-4-3 Check Results of your evaluation
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{AI_API_URL}}/v2/lm/metrics?tagFilters=evaluation.ai.sap.com/child-of={{postEvaluationID}}
+  body: none
+  auth: bearer
+}
+
+params:query {
+  tagFilters: evaluation.ai.sap.com/child-of={{postEvaluationID}}
+}
+
+headers {
+  AI-Resource-Group: default
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}

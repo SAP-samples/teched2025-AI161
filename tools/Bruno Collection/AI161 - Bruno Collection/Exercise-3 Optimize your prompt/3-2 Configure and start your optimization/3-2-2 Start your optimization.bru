@@ -1,0 +1,35 @@
+meta {
+  name: 3-2-2 Start your optimization
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{AI_API_URL}}/v2/lm/executions
+  body: json
+  auth: bearer
+}
+
+headers {
+  AI-Resource-Group: default
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+body:json {
+  {
+    "configurationId": "{{optimConfigurationID}}"
+  }
+}
+
+script:post-response {
+  let data = res.getBody();
+  if (data.id) {
+    let execID = data.id;
+    // https://docs.usebruno.com/testing/script/javascript-reference#setenvvar
+    bru.setEnvVar("optimizationID", execID);
+    console.info("Set optimizationID to:", execID);
+  }
+}

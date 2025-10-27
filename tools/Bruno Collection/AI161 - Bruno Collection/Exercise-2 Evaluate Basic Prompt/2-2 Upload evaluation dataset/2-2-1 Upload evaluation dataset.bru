@@ -1,0 +1,33 @@
+meta {
+  name: 2-2-1 Upload evaluation dataset
+  type: http
+  seq: 1
+}
+
+put {
+  url: {{AI_API_URL}}/v2/lm/dataset/files/{{ObjectStoreSecret}}/{{groupID}}/testdata/facility-classification-eval.json
+  body: file
+  auth: bearer
+}
+
+headers {
+  AI-Resource-Group: default
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+body:file {
+  file: @file(C:\Users\I588417\Documents\GitHub\teched2025-AI161\data\datasets\facility_eval_data.json) @contentType(application/json; charset=utf-8)
+}
+
+script:post-response {
+  let data = res.getBody();
+  if (data.id) {
+    let templateID = data.id;
+    // https://docs.usebruno.com/testing/script/javascript-reference#setenvvar
+    bru.setEnvVar("promptTemplateID", templateID);
+    console.info("Set promptTemplateID to:", templateID);
+  }
+}

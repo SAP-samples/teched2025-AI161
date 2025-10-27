@@ -1,0 +1,26 @@
+meta {
+  name: 1-1 Get Auth Token
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{AUTH_URL}}/oauth/token?grant_type=client_credentials
+  body: none
+  auth: basic
+}
+
+params:query {
+  grant_type: client_credentials
+}
+
+auth:basic {
+  username: {{CLIENT_ID}}
+  password: {{CLIENT_SECRET}}
+}
+
+script:post-response {
+  let data = res.getBody();
+  let token = bru.setEnvVar("TOKEN", data.access_token);
+  console.info("Set TOKEN.");
+}

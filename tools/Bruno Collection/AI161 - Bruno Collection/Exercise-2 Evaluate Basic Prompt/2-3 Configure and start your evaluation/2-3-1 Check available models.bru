@@ -1,0 +1,80 @@
+meta {
+  name: 2-3-1 Check available models
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{AI_API_URL}}/v2/lm/scenarios/foundation-models/models
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~executionScheduleId: 
+}
+
+headers {
+  AI-Resource-Group: default
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+body:json {
+  {
+      "name": "genai-eval-conf",
+      "scenarioId": "genai-evaluations",
+      "executableId": "genai-evaluations-simplified",
+      "inputArtifactBindings": [
+          {
+              "key": "datasetFolder",
+              "artifactId": "{{artifactID}}"
+          }
+      ],
+      "parameterBindings": [
+          {
+              "key": "repetitions",
+              "value": "1"
+          },
+          {
+              "key": "orchestrationDeploymentURL",
+              "value": {{ORCH_URL}}
+          },
+          {
+              "key": "metrics",
+              // possible metrcis to evaluate by
+              "value": "JSON Schema Match"
+          },
+          {
+              "key": "testDataset",
+              "value": "facility_eval_data.json"
+          },
+          {
+              "key": "variableMapping",
+              "value": variable_mapping
+          },
+          {
+              "key": "promptTemplate",
+              "value": "{{promptTemplateID}}"
+          },
+          {
+              "key": "models",
+              "value": models_list
+          },
+          {
+              "key": "debugMode",
+              "value": "ON"
+          }
+}
+
+script:post-response {
+  let data = res.getBody();
+  if (data.id) {
+    let templateID = data.id;
+    // https://docs.usebruno.com/testing/script/javascript-reference#setenvvar
+    bru.setEnvVar("promptTemplateID", templateID);
+    console.info("Set promptTemplateID to:", templateID);
+  }
+}

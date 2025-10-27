@@ -1,0 +1,37 @@
+meta {
+  name: 1-2 Find Orchetsration Service Deployment
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{AI_API_URL}}/v2/lm/deployments
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~executionScheduleId: 
+}
+
+headers {
+  AI-Resource-Group: default
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+script:post-response {
+  let data = res.getBody();
+  for (var i = 0; i < data.resources.length; i++) {
+    let r = data.resources[i];
+    if (r.configurationName.toLowerCase().includes("orchestration") && r.status == "RUNNING") {
+      let url = r.deploymentUrl;
+      // https://docs.usebruno.com/testing/script/javascript-reference#setenvvar
+      bru.setEnvVar("ORCH_URL", url);
+      console.info("Set ORCH_URL to:", url);
+      break;
+    }
+  }
+}

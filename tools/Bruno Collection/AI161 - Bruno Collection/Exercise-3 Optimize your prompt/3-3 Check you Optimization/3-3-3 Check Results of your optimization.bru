@@ -1,0 +1,19 @@
+meta {
+  name: 3-3-3 Check Results of your optimization
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{AI_API_URL}}/v2/lm/dataset/files/default/{{optimizationID}}/result-data/results.json
+  body: none
+  auth: bearer
+}
+
+headers {
+  AI-Resource-Group: default
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}

@@ -1,0 +1,19 @@
+meta {
+  name: 3-3-2 Check Logs of your optimization
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{AI_API_URL}}/v2/lm/executions/{{optimizationID}}/logs
+  body: none
+  auth: bearer
+}
+
+headers {
+  AI-Resource-Group: default
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}

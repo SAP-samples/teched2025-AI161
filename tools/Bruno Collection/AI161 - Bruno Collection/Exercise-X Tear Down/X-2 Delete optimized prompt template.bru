@@ -1,0 +1,43 @@
+meta {
+  name: X-2 Delete optimized prompt template
+  type: http
+  seq: 2
+}
+
+delete {
+  url: {{AI_API_URL}}/v2/lm/promptTemplates/{{optimPromptTemplateID}}
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~executionScheduleId: 
+}
+
+headers {
+  AI-Resource-Group: default
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+body:json {
+  {
+    "name": "{{groupID}}-facility-classification-base",
+    "version": "1.0.0",
+    "scenario": "AI-161-{{groupID}}",
+    "spec": {
+      "template": [
+        {
+          "role": "system",
+          "content": "You are a helpful assistant"
+        },
+        {
+          "role": "user",
+          "content": "{Giving the following message: \n     --- \n     {{?input}} \n     --- \n     Extract and return a json with the follwoing keys and values: \n     - \"urgency\" as one of `high`, `medium`, `low` \n     - \"sentiment\" as one of `negative`, `neutral`, `positive` \n     - \"categories\" Create a dictionary with categories as keys and boolean values (True/False), where the value indicates whether the category is one of the best matching support category tags from: `emergency_repair_services`, `routine_maintenance_requests`, `quality_and_safety_concerns`, `specialized_cleaning_services`, `general_inquiries`, `sustainability_and_environmental_practices`, `training_and_support_requests`, `cleaning_services_scheduling`, `customer_feedback_and_complaints`, `facility_management_issues` \n     Your complete message should be a valid json string that can be read directly and only contain the keys mentioned in the list above. Never enclose it in ```json...```, no newlines, no unnessacary whitespaces."
+        }
+      ]
+    }
+  }
+}

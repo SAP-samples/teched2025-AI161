@@ -1,0 +1,83 @@
+meta {
+  name: 2-3-3 Configure your evaluation
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{AI_API_URL}}/v2/lm/configurations
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~executionScheduleId: 
+}
+
+headers {
+  AI-Resource-Group: default
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+body:json {
+  {
+    "name": "genai-eval-conf",
+    "scenarioId": "genai-evaluations",
+    "executableId": "genai-evaluations-simplified",
+    "inputArtifactBindings": [
+      {
+        "key": "datasetFolder",
+        "artifactId": "{{evalArtifactID}}"
+      }
+    ],
+    "parameterBindings": [
+      {
+        "key": "repetitions",
+        "value": "1"
+      },
+      {
+        "key": "orchestrationDeploymentURL",
+        "value": "{{ORCH_URL}}"
+      },
+      {
+        "key": "metrics",
+        // possible metrcis to evaluate by
+        //JSON Schema Match, BERT Score, ROUGE, Exact Match, Pointwise Instruction Following, Pointwise Correctness, Pointwise Answer Relevance
+        "value": "Pointwise Correctness" 
+      },
+      {
+        "key": "testDataset",
+        "value": "{\"path\": \"testdata/facility-classification-eval.json\", \"type\": \"json\"}"
+      },
+      {
+        "key": "promptTemplate",
+        "value": "{{promptTemplateID}}"
+      },
+      {
+        "key": "models",
+        "value": "{{targetModel}}"
+      },
+      { 
+        "key": "variableMapping",
+        "value" : "{\"json_schema_match/json_schema\":\"data/json_schema_value\",\"prompt/input\": \"data/input\"}"
+      },
+      {
+        "key": "debugMode",
+        "value": "ON"
+      }
+    ]
+  }
+}
+
+script:post-response {
+  let data = res.getBody();
+  if (data.id) {
+    let configID = data.id;
+    // https://docs.usebruno.com/testing/script/javascript-reference#setenvvar
+    bru.setEnvVar("evalConfigurationID", configID);
+    console.info("Set evalConfigurationID to:", configID);
+  }
+}

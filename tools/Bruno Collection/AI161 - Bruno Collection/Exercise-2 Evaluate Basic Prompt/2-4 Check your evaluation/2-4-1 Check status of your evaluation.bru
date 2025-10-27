@@ -1,0 +1,19 @@
+meta {
+  name: 2-4-1 Check status of your evaluation
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{AI_API_URL}}/v2/lm/executions/{{evaluationID}}
+  body: none
+  auth: bearer
+}
+
+headers {
+  AI-Resource-Group: default
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}

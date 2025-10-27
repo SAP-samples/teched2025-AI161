@@ -1,0 +1,85 @@
+meta {
+  name: 2-3-2 Check available metrics
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{AI_API_URL}}/v2/lm/evaluationMetrics
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~query_params: { "scenario": "genai-evaluations"}
+}
+
+headers {
+  AI-Resource-Group: default
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+body:json {
+  {
+    "name": "genai-eval-conf",
+    "scenarioId": "genai-evaluations",
+    "executableId": "genai-evaluations-simplified",
+    // link to the evaluation data with the artifact created in step 2-2-2
+    "inputArtifactBindings": [
+      {
+        "key": "datasetFolder",
+        "artifactId": "{{artifactID}}"
+      }
+    ],
+    // configuration of the evaluation
+    "parameterBindings": [
+      {
+        "key": "repetitions",
+        "value": "1"
+      },
+      {
+        "key": "orchestrationDeploymentURL",
+        "value": "{{ORCH_URL}}"
+      },
+      // possible models to evaluate for
+      {
+        "key": "models",
+        "value": "gpt-4o-mini:latest"
+        //"value": ""
+      },
+      // possible metrcis to evaluate by - can be chosen from 2-3-3
+      {
+        "key": "metrics",
+        "value": "JSON Schema Match"
+        //"value:" ""
+      },
+      // filename for the dataset
+      {
+        "key": "testDataset",
+        "value": "facility_eval_data.json"
+      },
+      // template created in 2-1  
+      {
+        "key": "promptTemplate",
+        "value": "{{promptTemplateID}}"
+      },
+      {
+        "key": "debugMode",
+        "value": "ON"
+      }
+    ]
+  }
+}
+
+script:post-response {
+  let data = res.getBody();
+  if (data.id) {
+    let templateID = data.id;
+    // https://docs.usebruno.com/testing/script/javascript-reference#setenvvar
+    bru.setEnvVar("promptTemplateID", templateID);
+    console.info("Set promptTemplateID to:", templateID);
+  }
+}

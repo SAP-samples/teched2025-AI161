@@ -1,0 +1,19 @@
+meta {
+  name: 3-3-1 Check status of your Optimization
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{AI_API_URL}}/v2/lm/executions/{{optimizationID}}
+  body: none
+  auth: bearer
+}
+
+headers {
+  AI-Resource-Group: default
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}

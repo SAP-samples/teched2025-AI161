@@ -1,0 +1,19 @@
+meta {
+  name: 2-4-2 Check logs of your evaluation
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{AI_API_URL}}/v2/lm/executions/{{evaluationID}}/logs
+  body: none
+  auth: bearer
+}
+
+headers {
+  AI-Resource-Group: default
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}

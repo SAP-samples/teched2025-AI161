@@ -1,0 +1,35 @@
+meta {
+  name: 2-3-4 Start your Evlautaion
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{AI_API_URL}}/v2/lm/executions
+  body: json
+  auth: bearer
+}
+
+headers {
+  AI-Resource-Group: default
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+body:json {
+  {
+    "configurationId": "{{evalConfigurationID}}"
+  }
+}
+
+script:post-response {
+  let data = res.getBody();
+  if (data.id) {
+    let execID = data.id;
+    // https://docs.usebruno.com/testing/script/javascript-reference#setenvvar
+    bru.setEnvVar("evaluationID", execID);
+    console.info("Set evaluationID to:", execID);
+  }
+}

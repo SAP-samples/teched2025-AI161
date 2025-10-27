@@ -1,0 +1,43 @@
+meta {
+  name: 3-1-3 Register artifact
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{AI_API_URL}}/v2/lm/artifacts
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~executionScheduleId: 
+}
+
+headers {
+  AI-Resource-Group: default
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+body:json {
+  {
+    "name": "facility-classification-optimization-data",
+    "kind": "dataset",
+    "url": "ai://default/{{groupID}}/",
+    "description": "Artifact for prompt optimization",
+    "scenarioId": "genai-optimizations"
+  }
+}
+
+script:post-response {
+  let data = res.getBody();
+  if (data.id) {
+    let artifactID = data.id;
+    // https://docs.usebruno.com/testing/script/javascript-reference#setenvvar
+    bru.setEnvVar("optimArtifactID", artifactID);
+    console.info("Set optimArtifactID to:", artifactID);
+  }
+}

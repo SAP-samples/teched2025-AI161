@@ -1,0 +1,33 @@
+meta {
+  name: 2-2-4 Check your artifact
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{AI_API_URL}}/v2/lm/artifacts/{{evalArtifactID}}
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~executionScheduleId: 
+}
+
+headers {
+  AI-Resource-Group: default
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+script:post-response {
+  let data = res.getBody();
+  if (data.id) {
+    let artifactID = data.id;
+    // https://docs.usebruno.com/testing/script/javascript-reference#setenvvar
+    bru.setEnvVar("evalArtifactID", artifactID);
+    console.info("Set evalArtifactID to:", artifactID);
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "AI161 - Bruno Collection",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

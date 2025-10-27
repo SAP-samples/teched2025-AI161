@@ -1,0 +1,78 @@
+meta {
+  name: 3-2-1 Configure your optimization
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{AI_API_URL}}/v2/lm/configurations
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~executionScheduleId: 
+}
+
+headers {
+  AI-Resource-Group: default
+}
+
+auth:bearer {
+  token: {{TOKEN}}
+}
+
+body:json {
+  {
+    "name": "facility-classification-optimization",
+    "executableId": "genai-optimizations",
+    "scenarioId": "genai-optimizations",
+    "parameterBindings": [
+      {
+        "key": "basePrompt",
+        "value": "AI-161-{{groupID}}/{{groupID}}-facility-classification-base:1.0.0"
+      },
+      {
+        "key": "baseModel",
+        "value": "gpt-4o:2024-08-06"
+      },
+      {
+        "key": "dataset",
+        "value": "testdata/facility-classification-optim.json"
+      },
+      {
+        "key": "optimizationMetric",
+        "value": "JSON_Match"
+        //"value": ""LLMaaJ:Sem_Sim_1"
+      },
+      {
+        "key": "targetModels",
+        "value": "{{targetModel}}"
+      },
+      {
+        "key": "targetPromptMapping",
+        "value": "{{targetModel}}={{groupID}}-facility-classification-optim:0.0.1"
+      },
+      {
+        "key": "includeFewShotExamples",
+        "value": "false" //"true"
+      }
+    ],
+    "inputArtifactBindings": [
+      {
+        "key": "prompt-data",
+        "artifactId": "{{optimArtifactID}}"
+      }
+    ]
+  }
+}
+
+script:post-response {
+  let data = res.getBody();
+  if (data.id) {
+    let configID = data.id;
+    // https://docs.usebruno.com/testing/script/javascript-reference#setenvvar
+    bru.setEnvVar("optimConfigurationID", configID);
+    console.info("Set optimConfigurationID to:", configID);
+  }
+}
