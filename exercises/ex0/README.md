@@ -2,6 +2,8 @@
 
 In this exercise, you will chose your mode of interaction with the AI Core services. You can either use our UI the SAP AI Launchpad, the Bruno API client or our Jupyter Notebook and VSCode to work through the following exercises.
 
+Either way you will experience how to evaluate and optimize prompts using the AI Core services for prompt optimization and evaluation based on a demo scenario.
+
 ## Familiarize yourself with our Demo Scenario
 
 Our Scenario for this hands-on session is an existing AI use-case that supports a facility management team in analysing messages the team receives from employees about issues in the office. 
