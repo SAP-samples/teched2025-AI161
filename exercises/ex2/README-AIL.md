@@ -9,7 +9,7 @@ After completing these steps you will have created and stored a prompt template,
 ### 2-1-1 Create the prompt template
 First let's create a prompt template for the basic prompt provided in the data folder.
 1.  Go back to the `Prompt Editor` by clicking on it in the side menu.
-2.  Configure the first message in your prompt as a `System` messages by clicking on `System`.
+2.  Configure the first message in your prompt as a `System` message by clicking on `System`.
 <br>![](/exercises/ex2/images/ail02-1.png)
 
 3.  Copy the text for the system message from the `facility_prompt_basic.yaml` file located in the `data/prompts` folder and paste it into the message field.
@@ -20,7 +20,7 @@ First let's create a prompt template for the basic prompt provided in the data f
 6.  Optionally, in the `Variable Definitions` you can provide a default value for your template variable `input`. Copy the following text into the default field.
 
 ```
-Subject: Assistance Needed with Facility Management Coordination\n\nHi Support Team,\n\nI hope this message finds you well. My name is [Sender], and I've been utilizing Facility Solutions Company for our office building's management for the past year. Overall, I've been quite satisfied with the services provided, but I\u2019ve encountered an issue that I need your help with.\n\nRecently, I've noticed some inconsistencies in the coordination of our space utilization and security measures. Specifically, there have been a few instances where the security protocols were not followed correctly, and the space allocation for our new team members hasn't been managed as efficiently as before. This has caused some disruptions in our daily operations.\n\nI haven't taken any steps to address this issue internally yet, as I believe it would be best handled by your team of experts. Could you please look into this matter and provide a solution to ensure that our facility management runs smoothly again?\n\nThank you for your attention to this matter. I look forward to your prompt assistance.\n\nBest regards,\n[Sender]
+Subject: Assistance Needed with Facility Management Coordination\n\nHi Support Team,\n\nI hope this message finds you well. My name is [Sender], and I've been utilizing Facility Solutions Company for our office building's management for the past year. Overall, I've been quite satisfied with the services provided, but I've encountered an issue that I need your help with.\n\nRecently, I've noticed some inconsistencies in the coordination of our space utilization and security measures. Specifically, there have been a few instances where the security protocols were not followed correctly, and the space allocation for our new team members hasn't been managed as efficiently as before. This has caused some disruptions in our daily operations.\n\nI haven't taken any steps to address this issue internally yet, as I believe it would be best handled by your team of experts. Could you please look into this matter and provide a solution to ensure that our facility management runs smoothly again?\n\nThank you for your attention to this matter. I look forward to your prompt assistance.\n\nBest regards,\n[Sender]
 ``` 
 <br>![](/exercises/ex2/images/ail02-3.png)
 
@@ -35,7 +35,7 @@ Check with the group, so that the workload of the hands-on is evenly distributed
 
 You should see the model response in the text field to the right.
 
-6.  Now that we have configured and testes our prompt we can save it as a template into the prompt registry. Click on `Save as Template` to store the prompt template in the prompt registry.
+6.  Now that we have configured and tested our prompt we can save it as a template into the prompt registry. Click on `Save as Template` to store the prompt template in the prompt registry.
 <br>![](/exercises/ex2/images/ail02-7.png)
 
 7. Fill out the template information in the dialog that opens and click on `Save`.
@@ -136,9 +136,9 @@ After the file has finished uploading click on `Add` to create the artifact.
 
 15. Our use-case requests the LLM to follow instructions to extract structured information from unstructured text. Therefore, we will select metrics that measure instruction following and correctness of the answers.
 In the metrics selection view, choose the following metrics by clicking on them:
-- Pointwise correctness
-- Pointwise accuracy
-- Pointwise instruction following
+- Pointwise Correctness
+- Pointwise Answer Relevance
+- Pointwise Instruction Following
 Then click `Next` to proceed to the next step.
 <br>![](/exercises/ex2/images/ail02-23.png)
 
@@ -166,7 +166,7 @@ After starting the evaluation it will take some time until the evaluation is fin
 
 ### 2-4-2 Review the evaluation results
 
-1. You can now find the finished evaluation and your results in the `Optimization` view. Open the `Optimization` view from the side menu. Find your evaluation and click on it o view the results.
+1. You can now find the finished evaluation and your results in the `Optimization` view. Open the `Optimization` view from the side menu. Find your evaluation and click on it to view the results.
 <br>![](/exercises/ex2/images/ail02-27.png)
 
 2. In the evaluation detail view you can now see the results of the evaluation. Check the scores for the different metrics we have selected.

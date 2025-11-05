@@ -26,13 +26,13 @@ Now expand 'Exercise-1 Setup' to see the requests included in this exercise and 
 Now click on "Configure".
 <br>![](/exercises/ex1/images/bru01_5.png)
 
-5. We have provided you with an AI Core Service Key from which we now new to fill in the following environment variables:
+5. We have provided you with an AI Core Service Key, which you now need to use to fill in the following environment variables:
 - AUTH_URL: Copy the value from the "url" key from your AI Core Service Key.
 - AI_API_URL: Copy the value from the "AI_API_URL" key from your AI Core Service Key.
 - CLIENT_ID: Copy the value from "clientid" key from your AI Core Service Key.
 - CLIENT_SECRET: Copy the value from "clientsecret" key from your AI Core Service Key.
 All other environment variables will be filled by scripts during this tutorial.
-Now Save your changes and make sure the "AI-161" environment is selected.
+Now save your changes and make sure the "AI-161" environment is selected.
 
 Your Bruno API client is now ready to make request to the provided AI Core instance. Let's setup the authentication token next.
 
@@ -44,7 +44,7 @@ This request will fetch an authentication token from the AI Core instance and st
 
 ## Exercise 1.2 Find Orchestration Service Deployment
 
-Both the evaluation service and the prompt optimizer we use in this tutorial make llm request against the orchestration service. AI Core instances create a default orchestration deployment that we need to find in order to finish setting up.
+Both the evaluation service and the prompt optimizer we use in this tutorial make llm requests against the orchestration service. AI Core instances create a default orchestration deployment that we need to find in order to finish setting up.
 
 1. Click on "1-2 Find Orchestration Service Deployment" and click on the arrow to the left to execute the request.
 

@@ -2,7 +2,7 @@
 
 In this exercise, we will evaluate our basic prompt using the evaluation data set provided and the AI Core evaluation service.
 
-## Exercise 2.1 Create a template for the bas prompt
+## Exercise 2.1 Create a template for the base prompt
 
 After completing these steps you will have created and stored a prompt template, and evaluated it with a set of metrics. 
 
@@ -11,14 +11,14 @@ First let's create a prompt template for the basic prompt provided in the data f
 1. Open request 2-1 Create base prompt template in the Bruno API client.
 2. Check that the system messages provided in the request body match the basic prompt located in the data/prompts/facility_prompt_basic.yaml file.
 3. Execute the request to create the prompt template in the prompt registry by clicking the left arrow.
-4. You should receive a response messages that the prompt was created successfully. A script copies the prompt template id from the response body and stores it in an environment variable for later use.
+4. You should receive a response message saying that the prompt was created successfully. A script copies the prompt template id from the response body and stores it in an environment variable for later use.
 
 ### 2-1-2 Check your stored template
 Let's retrieve and check our stored template.
 1. Open request 2-2 Check base prompt template in the Bruno API client.
-2. Not that the request uses the environment variable promptTemplateID in the request URL.
+2. Note that the request uses the environment variable promptTemplateID in the request URL.
 3. Execute the request by clicking the left arrow.
-4. You should see your stored prompt template in the.
+4. You should see your stored prompt template in the response.
 
 ## Exercise 2.2 Upload Evaluation Data Set
 
@@ -39,7 +39,7 @@ Now we can register this file as an artifact in AI Core.
 1. Open request 2-2-3 Register artifact in the Bruno API client.
 2. Check the parameters set in the request body.
 3. Execute the request to register the artifact in AI Core.
-4. You should receive a response messages that the artifact was acknowledged. A script copies the artifact id from the response body and stores it in an environment variable for later use.
+4. You should receive a response message saying that the artifact was acknowledged. A script copies the artifact id from the response body and stores it in an environment variable for later use.
 
 Finally, let's check that we can access the artifact.
 1. Open request 2-2-4 Check your artifact in the Bruno API client.

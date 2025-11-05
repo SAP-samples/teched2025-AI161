@@ -7,7 +7,7 @@ In this exercise, we will access and setup SAP AI Launchpad to work with through
 After completing these steps you will have opened AI Launchpad and logged in to the provided demo instance. 
 Making you ready to work through the exercises in this tutorial.
 
-1.  Locate and open the file 'credentials.txt' on jour desktop.
+1.  Locate and open the file 'credentials.txt' on your desktop.
 2.  Click on the AI Launchpad URL provided in the file to open it in your web browser.
 3.  Enter the username and password provided in the 'credentials.txt' file to log in. 
 <br>![](/exercises/ex1/images/ail01-1.png)
@@ -37,7 +37,7 @@ The Model Library is where you can find and compare the different models availab
 3.	Click on  `Chat`.
 <br>![](/exercises/ex1/images/ail01-5.png)
 
-Similar to the `Prompt Editor` the `Chat` interface is designed to experiment with prompts and models in a chat scenarios.
+Similar to the `Prompt Editor` the `Chat` interface is designed to experiment with prompts and models in chat scenarios.
 
 4.	Click on  `Orchestration`.
 <br>![](/exercises/ex1/images/ail01-6.png)
@@ -57,6 +57,6 @@ In the `Optimization` UI you can start and review your evaluations and optimizat
 
 ## Summary
 
-You've now setup your AIL Launchpad and have made yourself familiar with the main interfaces of the Generative AI Hub. You are now ready to work through the exercises in this tutorial.
+You've now setup your AI Launchpad and have made yourself familiar with the main interfaces of the Generative AI Hub. You are now ready to work through the exercises in this tutorial.
 
 Continue to - [Exercise 2 - Evaluate Basic Prompt](../ex2/README-AIL.md)

@@ -31,7 +31,7 @@ A Wizard to configure the optimization opens.
 8. Next we need to select the model or models for which we want to create optimized prompts. Click on the selection icon to open the model selection.
 <br>![](/exercises/ex3/images/ail03-5.png)
 
-9. Browse the available models and select the model you want to use for this exercise. Normally, you can configure up to 4 models to compare them for your use-case. For this hands-on session let's coordinate choosing different models across groups and chose one model each. This allows us to distribute the workload of the hands-on evenly across different models and later compare them as we are all using the same technical user.
+9. Browse the available models and select the model you want to use for this exercise. Normally, you can configure up to 4 models to compare them for your use-case. For this hands-on session let's coordinate choosing different models across groups and choose one model each. This allows us to distribute the workload of the hands-on evenly across different models and later compare them as we are all using the same technical user.
 Click on the model that was chosen for your group and then click `Select`.
 <br>![](/exercises/ex3/images/ail03-6.png)
 
@@ -92,13 +92,13 @@ After starting the optimization it will take some time until the optimization is
 1. Click the refresh icon in the top right to refresh the view.
 <br>![](/exercises/ex3/images/ail03-17.png)
 
-2. Check if the status of the optimization has change to running - indicating that the optimization process has started.
+2. Check if the status of the optimization has changed to running - indicating that the optimization process has started.
 <br>![](/exercises/ex3/images/ail03-18.png)
 
 3. Periodically refresh until the optimization status has changed to `Completed`. 
 <br>![](/exercises/ex3/images/ail03-19.png)
 
-4. You can now find the finished optimization and your results in the `Optimization` view. Open the `Optimization` view from the side menu. Find your optimization and click on it o view the results.
+4. You can now find the finished optimization and your results in the `Optimization` view. Open the `Optimization` view from the side menu. Find your optimization and click on it to view the results.
 <br>![](/exercises/ex3/images/ail03-20.png)
 
 5. In the optimization detail view you can now see the results of the optimization. Check the baseline score of the original prompt and the scores of the optimized prompts. 

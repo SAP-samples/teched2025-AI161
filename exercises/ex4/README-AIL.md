@@ -41,9 +41,9 @@ Click on the model that was chosen for your group and then click `Select`.
 
 15. TO be able to compare our results we will choose the same metrics as before. 
 In the metrics selection view, choose the following metrics by clicking on them:
-- Pointwise correctness
-- Pointwise accuracy
-- Pointwise instruction following
+- Pointwise Correctness
+- Pointwise Answer Relevance
+- Pointwise Instruction Following
 Then click `Next` to proceed to the next step.
 <br>![](/exercises/ex2/images/ail02-23.png)
 
@@ -66,7 +66,7 @@ After starting the evaluation it will take some time until the evaluation is fin
 1. Click the refresh icon in the top right to refresh the view.
 <br>![](/exercises/ex4/images/ail04-6.png)
 
-2. Check if the status of the evaluation has change to running - indicating that the evaluation process has started.
+2. Check if the status of the evaluation has changed to running - indicating that the evaluation process has started.
 <br>![](/exercises/ex4/images/ail04-7.png)
 
 3. Periodically click the refresh icon to update the status of the evaluation run. Once the status has changed to `Completed` the evaluation is finished.
@@ -74,7 +74,7 @@ After starting the evaluation it will take some time until the evaluation is fin
 
 ### 4-2-2 Review the evaluation results
 
-1. You can now find the finished evaluation and your results in the `Optimization` view. Open the `Optimization` view from the side menu. Find your evaluation and click on it o view the results.
+1. You can now find the finished evaluation and your results in the `Optimization` view. Open the `Optimization` view from the side menu. Find your evaluation and click on it to view the results.
 <br>![](/exercises/ex4/images/ail04-9.png)
 
 2. In the evaluation detail view you can now see the results of the evaluation. Check the scores for the different metrics we have selected.

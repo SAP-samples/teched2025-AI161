@@ -6,7 +6,7 @@ user: |-
     ---
     {{?input}}
     ---
-    Extract and return a json with the follwoing keys and values:
+    Extract and return a json with the following keys and values:
     - "urgency" as one of `high`, `medium`, `low`
     - "sentiment" as one of `negative`, `neutral`, `positive`
     - "categories" Create a dictionary with categories as keys and boolean values (True/False), 
@@ -17,4 +17,4 @@ user: |-
     `facility_management_issues`
 
     Your complete message should be a valid json string that can be read directly and only contain the keys 
-    mentioned in the list above. Never enclose it in ```json...```, no newlines, no unnessacary whitespaces.
+    mentioned in the list above. Never enclose it in ```json...```, no newlines, no unnecessary whitespaces.

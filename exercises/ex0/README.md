@@ -22,7 +22,7 @@ Open [basic prompt for this scenario](../../data/prompts/facility_prompt_basic.y
 
 You can find the data sets in the `data/datasets` folder stored as `facility_eval_data.json` and `facility_optim_data.json`. Each dataset contains a list of messages with the corresponding expected output when this message is used with the prompt. 
 
-Open one of [the data sets for this scenario](../../data/datasets/facility_optim_data.json) and read through a few entries in each of the this files.
+Open one of [the data sets for this scenario](../../data/datasets/facility_optim_data.json) and read through a few entries in each of this files.
 
 ## Summary
 
