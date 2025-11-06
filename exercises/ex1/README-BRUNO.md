@@ -52,6 +52,7 @@ This request will check all your deployments and store the url to your orchestra
 ## Summary
 
 You've now setup your Bruno API client and have done all necessary steps to work through the exercises in this tutorial.
+For each exercise in the readme files there is a corresponding bruno request you can execute instead of using the UI as described.
 
-Continue to - [Exercise 2 - Evaluate Basic Prompt](../ex2/README-BRUNO.md)
+Continue to - [Exercise 2 - Evaluate Basic Prompt](../ex2/README.md)
 
