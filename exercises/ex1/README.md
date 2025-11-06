@@ -61,4 +61,4 @@ In the `Optimization` UI you can start and review your evaluations and optimizat
 
 You've now setup your AI Launchpad and have made yourself familiar with the main interfaces of the Generative AI Hub. You are now ready to work through the exercises in this tutorial.
 
-Continue to - [Exercise 2 - Evaluate Basic Prompt](../ex2/README-AIL.md)
+Continue to - [Exercise 2 - Evaluate Basic Prompt](../ex2/README.md)

@@ -176,4 +176,4 @@ After starting the evaluation it will take some time until the evaluation is fin
 
 You have now evaluated the base prompt using the provided evaluation data set and the AI Core evaluation service. We can use these scores later to compare them with the results of the optimized prompt. Now let's continue to the next exercise where we will optimize the base prompt.
 
-Continue to - [Exercise 3 - Optimize the Prompt](../ex3/README-AIL.md)
+Continue to - [Exercise 3 - Optimize the Prompt](../ex3/README.md)

@@ -33,7 +33,7 @@ Now that you have familiarized yourself with the scenario, prompt and data sets,
 We recommend to use the AI launchpad for a more guided experience. If you are more familiar with API clients or coding you can also use the Bruno API client.
 
 1.	AI Launchpad - follow the instructions in the following readme to use the SAP AI Launchpad UI for working through the exercises.
-<br>- Continue to - [Exercise 1 - Setup AI Launchpad](../ex1/README-AIL.md)  
+<br>- Continue to - [Exercise 1 - Setup AI Launchpad](../ex1/README.md)  
 
 2.	Bruno API client - Open the Bruno API client and follow the instructions in the following readme to use the Bruno API client for working through the exercises.
 <br>- Continue to - [Exercise 1 - Setup Bruno API Client](../ex1/README-BRUNO.md)

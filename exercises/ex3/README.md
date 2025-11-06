@@ -114,4 +114,4 @@ After starting the optimization it will take some time until the optimization is
 
 You have now optimized the base prompt for one model. Now let's evaluate the optimized prompt to see if it has improved on our evaluation metrics.
 
-Continue to - [Exercise 4 - Evaluate the optimized Prompt ](../ex4/README-AIL.md)
+Continue to - [Exercise 4 - Evaluate the optimized Prompt ](../ex4/README.md)
