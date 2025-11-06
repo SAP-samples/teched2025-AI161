@@ -34,7 +34,7 @@ Click on the model that was chosen for your group and then click `Select`.
 
 13. Fill in the remaining information for the dataset artifact as follows:
 - File Type: `JSON`
-- Dataset File: `/facility_eval_data.json`
+- Dataset File: `facility_eval_data.json`
 
 14. Now that we have filled out all required Test input information we can move on to selecting evaluation metrics. Click `Next` to proceed to the metrics selection.
 <br>![](/exercises/ex4/images/ail04-4.png)

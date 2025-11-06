@@ -26,11 +26,10 @@ Now expand 'Exercise-1 Setup' to see the requests included in this exercise and 
 Now click on "Configure".
 <br>![](/exercises/ex1/images/bru01_5.png)
 
-5. We have provided you with an AI Core Service Key, which you now need to use to fill in the following environment variables:
-- AUTH_URL: Copy the value from the "url" key from your AI Core Service Key.
-- AI_API_URL: Copy the value from the "AI_API_URL" key from your AI Core Service Key.
-- CLIENT_ID: Copy the value from "clientid" key from your AI Core Service Key.
-- CLIENT_SECRET: Copy the value from "clientsecret" key from your AI Core Service Key.
+5. We have preconfigured this environment for you so you will only have to make slight changes:
+- Ask your session hosts for the actual `CLIENT_ID` and `CLIENT_SECRET`.
+- Set the value for the variable `group_ID` to your groupID as discussed with your session hosts.
+
 All other environment variables will be filled by scripts during this tutorial.
 Now save your changes and make sure the "AI-161" environment is selected.
 

@@ -49,7 +49,7 @@ Click on the model that was chosen for your group and then click `Select`.
 
 11. In the section `Upload File` provide the following information:
 - Object Store: `default`
-- Sub-folder path: `/T-01`
+- Sub-folder path: `/{{groupID}}`
 - Overwrite existing file: Yes
 
 Then open the file selection by clicking on the browse icon.
@@ -64,7 +64,7 @@ After the file has finished uploading click on `Add` to create the artifact.
 
 13. Fill in the remaining information for the dataset artifact as follows:
 - File Type: `JSON`
-- Dataset File: `/facility_optim_data.json`
+- Dataset File: `facility_optim_data.json`
 And click `Next` to proceed to the next step.
 <br>![](/exercises/ex3/images/ail03-12.png)
 
