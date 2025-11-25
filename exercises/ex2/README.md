@@ -40,6 +40,7 @@ You should see the model response in the text field to the right.
 
 7. Fill out the template information in the dialog that opens and click on `Save`.
 
+Select the Access level as: `Tenant`
 Use the following value as Scenario: `AI-161-{{groupID}}`
 Use the following value as Name: `{{groupID}}-facility-classification-base`
 Use the following value as Version: `0.0.1`
