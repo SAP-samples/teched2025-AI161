@@ -8,7 +8,7 @@ After completing these steps you will have opened AI Launchpad and logged in to 
 Making you ready to work through the exercises in this tutorial.
 
 1.  Click on the followingAI Launchpad URL provided to open AI Launchpad in your web browser.
-<br> [AI Launchpad URL](https://teched-demo-pku6pjpc.ai-launchpad.internalprod.eu-central-1.aws.ai-prod.cloud.sap/aic/index.html#/generativeaihub?workspace=teched25-ai161&resourceGroup=default&/g/prompteditor)
+<br> [AI Launchpad URL](https://teched-blr-demo.ai-launchpad.prod-eu20.westeurope.azure.ai-prod.cloud.sap/aic/index.html#/generativeaihub?workspace=techedblr25&resourceGroup=default&/g/prompteditor)
 
 2.  Enter the following username in the login screen: 
 - Username: DL_68EF6A521D26DC4AFFF3D633@global.corp.sap
