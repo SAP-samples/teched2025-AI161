@@ -96,6 +96,7 @@ After starting the optimization it will take some time until the optimization is
 <br>![](/exercises/ex3/images/ail03-18.png)
 
 3. Periodically refresh until the optimization status has changed to `Completed`. 
+You can copy and retain the job ID for future reference when checking the job status.
 <br>![](/exercises/ex3/images/ail03-19.png)
 
 4. You can now find the finished optimization and your results in the `Optimization` view. Open the `Optimization` view from the side menu. Find your optimization and click on it to view the results.
