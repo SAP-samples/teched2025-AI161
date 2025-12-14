@@ -86,34 +86,37 @@ A Dialog to chose between `Optimization` and `Evaluation` opens.
 3. Select `Evaluation`.
 <br>![](/exercises/ex2/images/ail02-12.png)
 
-4. First we need to select the prompt template we want to evaluate. Click on the selection icon to open the template selection.
+4. Select the `Prompt and Model` button to provide inputs for prompt template and model.
+<br>![](/exercises/ex2/images/ail02-13-1-promptAndModel.png)
+
+5. First we need to select the prompt template we want to evaluate. Click on the selection icon to open the template selection.
 <br>![](/exercises/ex2/images/ail02-13.png)
 
-5. Now choose your prompt template from the list by clicking on it and then clicking `Select`. 
+6. Now choose your prompt template from the list by clicking on it and then clicking `Select`. 
 You can use the filters to find your prompt template more easily.
 <br>![](/exercises/ex2/images/ail02-14.png)
 
 ### 2-3-2 
-6. Next we need to select the model which we want to evaluate. Click on the selection icon to open the model selection.
+7. Next we need to select the model which we want to evaluate. Click on the selection icon to open the model selection.
 <br>![](/exercises/ex2/images/ail02-15.png)
 
-7. Browse the available models and select the model you want to use for this exercise. Normally, you can configure multiple models to compare them for your use-case. For this hands-on session let's coordinate choosing different models across groups and chose one model each. This allows us to distribute the workload of the hands-on evenly across different models and later compare them as we are all using the same user. 
+8. Browse the available models and select the model you want to use for this exercise. Normally, you can configure multiple models to compare them for your use-case. For this hands-on session let's coordinate choosing different models across groups and chose one model each. This allows us to distribute the workload of the hands-on evenly across different models and later compare them as we are all using the same user. 
 Click on the model that was chosen for your group and then click `Select`.
 <br>![](/exercises/ex2/images/ail02-16.png)
 
-8. Finally, we need to select a dataset artifact to be used during the evaluation. Click on the selection icon to open the artifact selection.
+9. Finally, we need to select a dataset artifact to be used during the evaluation. Click on the selection icon to open the artifact selection.
 <br>![](/exercises/ex2/images/ail02-17.png)
 
-9. Since we have not yet uploaded the data we will create the dataset artifact now. Click on `Add` in the top right to create a new Data Set Artifact.
+10. Since we have not yet uploaded the data we will create the dataset artifact now. Click on `Add` in the top right to create a new Data Set Artifact.
 <br>![](/exercises/ex2/images/ail02-18.png)
 
-10. In the dialog that opens, provide the following information:
+11. In the dialog that opens, provide the following information:
 - Scenario: `AI-161-{{groupID}}`
 - Type: `Dataset`
 - Name: `{{groupID}}-eval-data`
 - Description: `Artifact for evaluation flow`
 
-11. In the section `Upload File` provide the following information:
+12. In the section `Upload File` provide the following information:
 - Object Store: `default`
 - Sub-folder path: `/T-01`
 - Overwrite existing file: Yes
@@ -125,17 +128,17 @@ Now find the `facility_eval_data.json` file located in the `data/datasets` folde
 After the file has finished uploading click on `Add` to create the artifact.
 <br>![](/exercises/ex2/images/ail02-20.png)
 
-12. Now select the newly created artifact from the list by clicking on it and then clicking `Select`.
+13. Now select the newly created artifact from the list by clicking on it and then clicking `Select`.
 <br>![](/exercises/ex2/images/ail02-21.png) 
 
-13. Fill in the remaining information for the dataset artifact as follows:
+14. Fill in the remaining information for the dataset artifact as follows:
 - File Type: `JSON`
 - Dataset File: `/facility_eval_data.json`
 
-14. Now that we have filled out all required Test input information we can move on to selecting evaluation metrics. Click `Next` to proceed to the metrics selection.
+15. Now that we have filled out all required Test input information we can move on to selecting evaluation metrics. Click `Next` to proceed to the metrics selection.
 <br>![](/exercises/ex2/images/ail02-22.png)
 
-15. Our use-case requests the LLM to follow instructions to extract structured information from unstructured text. Therefore, we will select metrics that measure instruction following and correctness of the answers.
+16. Our use-case requests the LLM to follow instructions to extract structured information from unstructured text. Therefore, we will select metrics that measure instruction following and correctness of the answers.
 In the metrics selection view, choose the following metrics by clicking on them:
 - Pointwise Correctness
 - Pointwise Answer Relevance
@@ -143,7 +146,7 @@ In the metrics selection view, choose the following metrics by clicking on them:
 Then click `Next` to proceed to the next step.
 <br>![](/exercises/ex2/images/ail02-23.png)
 
-16. In the next step we can configure additional evaluation parameters. We can choose the number of repetitions for the evaluation. We can define a mapping between prompt and dataset variables in case these are mismatched. And we can define Tags to be associated with the evaluation run.
+17. In the next step we can configure additional evaluation parameters. We can choose the number of repetitions for the evaluation. We can define a mapping between prompt and dataset variables in case these are mismatched. And we can define Tags to be associated with the evaluation run.
 For this exercise, we will leave everything at the default values. Click `Review` to proceed to the next step.
 <br>![](/exercises/ex2/images/ail02-24.png)
 
@@ -163,8 +166,7 @@ After starting the evaluation it will take some time until the evaluation is fin
 
 2. Check if the status of the evaluation has change to running - indicating that the evaluation process has started.
 
-3. Periodically click the refresh icon to update the status of the evaluation run. Once the status has changed to `Completed` the evaluation is finished.
-
+3. Periodically click the refresh icon to update the status of the evaluation run. Once the status has changed to `Completed` the evaluation is finished. You can copy and retain the evaluation job ID for future reference when checking the job status.
 ### 2-4-2 Review the evaluation results
 
 1. You can now find the finished evaluation and your results in the `Optimization` view. Open the `Optimization` view from the side menu. Find your evaluation and click on it to view the results.
