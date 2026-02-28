@@ -8,10 +8,10 @@ After completing these steps you will have opened AI Launchpad and logged in to 
 Making you ready to work through the exercises in this tutorial.
 
 1.  Click on the followingAI Launchpad URL provided to open AI Launchpad in your web browser.
-<br> [AI Launchpad URL](https://sap-ai-day-2025.ai-launchpad.intprod-eu12.eu-central-1.aws.ai-prod.cloud.sap/)
+<br> [AI Launchpad URL](https://sap-ai-day-2025.ai-launchpad.intprod-eu12.eu-central-1.aws.ai-prod.cloud.sap/aic/index.html)
 
 2.  Enter the following username in the login screen: 
-- Username: DL_68EF6A521D26DC4AFFF3D633@global.corp.sap
+- Username: smartlabs@sap.com
 <br>![](/exercises/ex1/images/ail01-1.png)
 
 3.  Ask your session hosts for the password and enter it to login.
