@@ -1,3 +1,5 @@
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2025-AI161)](https://api.reuse.software/info/github.com/SAP-samples/teched2025-AI161)
+
 # AI161 - Hands-on: Benchmark, evaluate, and optimize prompts across models
 
 ## Description
